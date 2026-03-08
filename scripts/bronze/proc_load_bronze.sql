@@ -2,6 +2,9 @@
 ======================================================
 Stored Procedure: Load Bronze Layer (Source -> Bronze)
 ======================================================
+
+-- ⚠️ Update the paths to match your local datasets folder
+
 Script Purpose:
   This stored procedure loads data into the 'bronze' schema from external CSV files.
   It performs the following actions:
@@ -45,7 +48,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.crm_cust_info';
 		BULK INSERT bronze.crm_cust_info
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_crm\cust_info.csv'
+		FROM 'C:\your-path\datasets\crm\cust_info.csv'
 		WITH (
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
@@ -62,7 +65,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.crm_prd_info';
 		BULK INSERT bronze.crm_prd_info
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_crm\prd_info.csv'
+		FROM 'C:\your-path\datasets\crm\prd_info.csv'
 		WITH (
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
@@ -79,7 +82,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.crm_sales_details';
 		BULK INSERT bronze.crm_sales_details
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_crm\sales_details.csv'
+		FROM 'crm\sales_details.csv'
 		WITH (
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
@@ -105,7 +108,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.erp_cust_az12';
 		BULK INSERT bronze.erp_cust_az12
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_erp\CUST_AZ12.csv'
+		FROM 'C:\your-path\datasets\erp\CUST_AZ12.csv'
 		WITH (
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
@@ -123,7 +126,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.erp_loc_a101';
 		BULK INSERT bronze.erp_loc_a101
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_erp\LOC_A101.csv'
+		FROM 'C:\your-path\datasets\erp\LOC_A101.csv'
 		WITH(
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
@@ -140,7 +143,7 @@ BEGIN
 
 		PRINT '>>> Inserting data into: bronze.erp_px_cat_g1v2';
 		BULK INSERT bronze.erp_px_cat_g1v2
-		FROM 'C:\Users\Lume\Documents\Data Engineering\Data Warehouse Project\source_erp\PX_CAT_G1V2.csv'
+		FROM 'C:\your-path\datasets\erp\PX_CAT_G1V2.csv'
 		WITH (
 		FIRSTROW = 2,
 		FIELDTERMINATOR = ',',
