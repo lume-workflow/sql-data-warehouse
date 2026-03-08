@@ -187,3 +187,14 @@ The Gold layer is implemented as **SQL Views**, avoiding data duplication while 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Thiago Furtado Barbosa**
+
+Data Architecture student with a background in both Data Engineering and Data Analysis. This project is part of an ongoing journey to build production-grade data solutions from the ground up.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lume-workflow/)
+
